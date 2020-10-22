@@ -1,18 +1,22 @@
 // テキスト「アニメーション」
-let x, y, vx, vy;
+let x, y, angle, vx, vy, om;
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
   x = width / 2;
   y = height / 2;
-  vx = 8;
-  vy = 8;
+  angle = 0;
+  vx = 5;
+  vy = 5;
+  om = 5;
 }
 
 function draw(){
-  background(160, 192, 255);
-  // BLANK[2] (hint: 作った star 関数を使います)
-
+  background(0);
+  star(x, y, 20, angle);
+  x += vx;
+  y += vy;
+  angle += om;
   // 端の処理パターン (1) 反対側から出てくる
   if(x > width){ x = 0; }
   else if(x < 0){ x = width; }
@@ -21,12 +25,14 @@ function draw(){
 }
 
 function star(cx, cy, r, angle){
+  fill(255, 229, 0);
+  noStroke();
   beginShape();
-  for(var i = 0; i < 20; i++){
-    var theta = TWO_PI * i * 2 / 5 - HALF_PI;
-    // BLANK[1] (hint: angle 分だけ星を回転させるには？)
-    var x = cx + cos(theta) * r;
-    var y = cy + sin(theta) * r;
+  for(let i = 0; i < 20; i++){
+    let theta = TWO_PI * i * 2 / 5 - HALF_PI;
+    theta += angle;
+    let x = cx + cos(theta) * r;
+    let y = cy + sin(theta) * r;
     vertex(x,y);
   }
   endShape(CLOSE);
