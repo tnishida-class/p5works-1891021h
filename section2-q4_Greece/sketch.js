@@ -25,5 +25,5 @@ function setup() {
   fill(255);
   // BLANK[2] (hint: 白い十字を描くには rect を二つ描こう)
   rect(0, 2 * d, width / 2.72, d);
-  rect(width / 1.36, 0, d, 3 * d);
+  rect(2 * d, 0, d, 5 * d);
 }
