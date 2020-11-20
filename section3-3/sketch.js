@@ -88,13 +88,8 @@ function dayOfWeek(y, m, d){
   for(let i = 1970; i < y; i++){
     count += daysInYear(i);
   }
-  // console.log(count);
-  // ここまでで昨年までの日数
-
   count += dayOfYear(y,m,d);
-
-  z = (count % 7 + 3) % 7;　//2回割って0~6に押し込める．
-
+  z = (count % 7 + 3) % 7;　//2回割って0~6に押し込める
   return(z);
 }
 
