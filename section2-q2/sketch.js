@@ -1,4 +1,4 @@
-// チェッカー
+//チェッカー
 function setup() {
   createCanvas(200, 200);
   let size = width / 8;
@@ -27,4 +27,4 @@ function setup() {
       ellipse(2*size*i+b, size*j+12.5, 20, 20);
     }
   }
-}//setup()
+}

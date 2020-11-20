@@ -1,4 +1,5 @@
 // テキスト「アニメーション」
+//外で宣言
 let x, y, vx, vy;
 const g = 1; // 重力加速度
 const vyMax = 30;
