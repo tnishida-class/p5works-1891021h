@@ -24,6 +24,11 @@ function draw(){
   if(y < 0){ y = height; }
 }
 
+function mouseClicked(){
+  x = mouseX;
+  y = mouseY;
+}
+
 function star(cx, cy, r, angle){
   fill(255, 229, 0);
   noStroke();
