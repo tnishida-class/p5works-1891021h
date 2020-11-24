@@ -33,7 +33,7 @@ function setup(){
 }
 
 function draw(){
-  background(160, 192, 255);
+  background(0);
   for(let i = 0; i < num; i++){
     ellipse(x[i], y[i], 15, 15);
     x[i] += vx[i];
