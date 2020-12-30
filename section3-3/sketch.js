@@ -1,6 +1,7 @@
 //index.htmlにカレンダーが表示されます。
 
 // テキスト「関数を作る(2) 値を戻す関数」～「総仕上げ：カレンダーを描画しよう」
+document.querySelector('#table').innerHTML = '';
 let inputy,inputm;
 
 function func1() {
