@@ -1,23 +1,24 @@
 //index.htmlにカレンダーが表示されます。
 
 // テキスト「関数を作る(2) 値を戻す関数」～「総仕上げ：カレンダーを描画しよう」
-function setup(){
-  y = 2020;
-  m = 10;
-  createCanvas(200, 200);
-  list = calendar(y, m);
-  const title = "Calendar　" + m + '/' + y + '.';
+let inputy,inputm;
+
+function func1() {
+  document.querySelector('#table').innerHTML = '';
+  inputy = document.getElementById("inputy").value;
+  inputm = document.getElementById("inputm").value;
+  setup();
+  const title = y + '年' + m + '月';
   document.getElementById('titleArea').innerHTML = title ;
   makeTable(list,'table');
+}
 
-  // for(let i = 2000; i <= 2100; i++){
-  //   if(isLeapYear(i)){
-  //     console.log(i + "年はうるう年です");
-  //   }
-  //   else{
-  //     console.log(i + "年はうるう年ではありません");
-  //   }
-  // }
+function setup(){
+  //CanvasRenderingContext2D.clearRect(x, y, width, height)
+  y = inputy;
+  m = inputm;
+  createCanvas(200, 200);
+  list = calendar(y, m);
 }
 
 function calendar(y, m){
