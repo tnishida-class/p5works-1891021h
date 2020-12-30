@@ -47,7 +47,7 @@ function calendar(y, m){
   array[7] = array[0];
   array.shift();
   tarray = transpose(array);
-  tarray.unshift(['M','T','W','T','F','S','S']);
+  tarray.unshift(['月','火','水','木','金','土','日']);
   return tarray;
 }
 
@@ -127,6 +127,13 @@ function makeTable(data, tableId){
                 cell.style.backgroundColor = "#bbb";
             } else {
                 cell.style.backgroundColor = "#ddd";
+            }
+            //土日
+            if(j==5){
+                cell.style.color = "blue";
+            }
+            if(j==6){
+                cell.style.color = "red";
             }
         }
     }
